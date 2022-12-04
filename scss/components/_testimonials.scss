@@ -1,8 +1,10 @@
 
 // slider about us
-.slider-about-us { 
+.section-about-us{
   background: url(../images/bg-gray.jpg) center bottom no-repeat;
   background-size: cover;
+}
+.slider-about-us {  
   .swiper-slide {
     display: flex;
   }

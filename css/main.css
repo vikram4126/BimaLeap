@@ -196,7 +196,8 @@
   background: rgba(255, 121, 83, 0.3);
 }
 
-.section-contact .container, .section-contact .container-lg {
+.section-contact .container,
+.section-contact .container-lg {
   position: relative;
   z-index: 101;
 }
@@ -214,6 +215,7 @@
           justify-content: center;
   text-align: center;
   margin-bottom: 20px;
+  padding: 0 10px;
 }
 
 @media (min-width: 992px) {
@@ -262,11 +264,33 @@
       justify-content: space-around;
   padding: 20px;
   background: rgba(255, 121, 83, 0.5);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 576px) {
+  .grid-contact .grid-contact-btn {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 @media (min-width: 992px) {
   .grid-contact .grid-contact-btn {
     display: block;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     background: rgba(66, 194, 200, 0);
     padding: 00px;
   }
@@ -348,9 +372,10 @@
 
 .grid-partners .partner-logo {
   border: 1px solid #f1f1f1;
+  text-align: center;
 }
 
-.slider-about-us {
+.section-about-us {
   background: url(../images/bg-gray.jpg) center bottom no-repeat;
   background-size: cover;
 }
