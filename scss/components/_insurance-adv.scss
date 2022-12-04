@@ -1,0 +1,45 @@
+// insurance-adv
+
+.insurance-adv {
+  background: url(../images/bg-red-img.jpg) center center no-repeat;
+  background-size: cover;
+}
+
+.grid-insurance-adv {
+  &._card {
+    border-radius: 15px;
+    padding: 20px;
+    overflow: hidden;
+    height: 100%;
+    ._card-image {
+      position: relative;
+      right: auto;
+      bottom: auto;
+      z-index: 100; margin:0 -20px -20px -20px;
+      @media (min-width: 992px) {
+        position: absolute; margin:0;
+      right: 0;
+      bottom: 0;
+      z-index: 99;
+      }
+      img {
+        width: 100%;
+      }
+    }
+    ._card-content,
+    ._card-footer {
+      position: relative;
+      z-index: 101;
+    }
+    ._card-footer {
+      margin-top: auto;
+    }
+    ._card-head {
+      margin: 10px 0 20px 0;
+      span {
+        font-weight: 800;
+        color: $color2;
+      }
+    }
+  }
+}

@@ -1,0 +1,75 @@
+._btn {
+  padding: 12px 20px;
+  border: 1px solid $color1;
+  font-weight: 700;
+  text-align: center;
+  min-width: 170px; cursor: pointer;
+  border-radius: 50px; margin-bottom: 10px; margin-right: 10px; display: inline-block;
+    &:hover{
+        background: $color1; color: $white;
+    }
+  &._btn-sm {
+    padding: 8px 20px;
+    font-weight: 500;
+  }
+
+  &._btn-1 {
+    border-color: $color1;background: $white;
+    color: $color1;
+    &:hover{background: $color1; color:$white ;}
+  }
+  &._btn-2 {
+    border-color: $color2;background: $white;
+    color: $color2;
+    &:hover{background: $color2; color:$white ;}
+  }
+  &._btn-3 {
+    border-color: $color3;background: $white;
+    color: $color3;
+    &:hover{background: $color3; color:$white ;}
+  }
+
+  &._btn-1-fill {
+    border-color: $color1;
+    background: $color1;
+    color: $white;
+    &:hover{background: $white; color: $color1;}
+  }
+  &._btn-2-fill {
+    border-color: $color2;
+    background: $color2;
+    color: $white;
+    &:hover{background: $white; color: $color2;}
+  }
+  &._btn-3-fill {
+    border-color: $color3;
+    background: $color3;
+    color: $white;
+    &:hover{background: $white; color: $color3;} 
+  }
+
+  &._btn-icon {
+    padding-left: 8px;  text-align: left;   
+    i {
+      margin-right: 5px;
+    }
+    &._btn-1{
+      &:hover{background: $white; color: $color1;} 
+    }
+    &._btn-2{
+      &:hover{background: $white; color: $color2;} 
+    }
+    &._btn-3{
+      &:hover{background: $white; color: $color3;} 
+    }
+    &._btn-1-fill{
+      &:hover{background: $color1; color: $white;} 
+    }
+     &._btn-2-fill{
+      &:hover{background: $color2; color: $white;} 
+    }
+    &._btn-3-fill{
+      &:hover{background: $color3; color: $white;} 
+    } 
+  }
+}

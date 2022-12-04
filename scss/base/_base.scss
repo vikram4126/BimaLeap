@@ -1,0 +1,52 @@
+// @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,700;1,400;1,700&display=swap");
+// @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap');
+ 
+
+*{margin: 0; padding: 0; list-style-type: none; box-sizing: border-box; transition: all .2s linear;}
+
+ul{margin: 0; padding: 0;}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  // font-family: "Poppins", sans-serif;
+//   font-family: "Montserrat", sans-serif;
+font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  background: #ffffff;   color: #282828;
+} 
+ 
+
+.row + .row{ margin-top: 30px;}
+
+.img-full {
+  width: 100%;
+  max-width: 100%;
+}
+p{
+  &.big{font-size: 1.5rem; line-height: 1.5rem;}
+&:nth-last-child(1){margin-bottom: 0;}
+}
+
+.img-box {
+  border-radius: 8px; 
+  box-shadow: 0 6px 12px 0 rgba(51, 56, 70, 0.1);
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  min-height: 280px;
+
+  h3 {
+    font-size: 20px;
+  }
+
+  p {
+    margin-bottom: 0px;
+    margin-top: 10px;
+  }
+}
+
+   

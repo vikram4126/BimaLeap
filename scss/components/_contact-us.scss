@@ -1,0 +1,59 @@
+// contact section
+.section-contact {
+    position: relative; overflow: visible; margin-top: 30px;
+    padding: 0px 0;
+    background: none;
+    @media(min-width:992px){
+       background: url(../images/bg-building.png) center bottom no-repeat #fff;
+       
+    }
+    &::before,
+    &::after {
+      content: "";
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      background: rgba($color2, 0.3);
+      z-index: 1;
+      @media(min-width:992px){
+        display: block;
+      }
+    }
+    &::after {
+      left: auto;
+      right: 0;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      background: rgba($color1, 0.3);
+    }
+    .container,.container-lg {
+      position: relative;
+      z-index: 101;
+    }
+  }
+  // grid-contact
+.grid-contact{
+  display: grid;
+  grid-template-columns: 1fr; align-items: center; justify-content: center;  text-align: center; margin-bottom: 20px;
+  @media(min-width:992px){ background: none;
+      grid-template-columns: 2fr 1fr 2fr; gap: 30px;text-align: left; margin-bottom: 0;
+  }
+  .grid-contact-content{padding: 20px; background: rgba($color2, .5);
+      @media(min-width:992px){
+          display: block; background: rgba($color2, 0);padding: 00px;
+      }}
+  .grid-contact-img{margin-top: -50px; margin-bottom: 0px; margin-left: auto; margin-right: auto; display: none;
+      @media(min-width:992px){
+          display: block;
+      }
+  }
+  .grid-contact-btn{display: flex; justify-content: space-around; padding: 20px; background: rgba($color1, .5);
+      @media(min-width:992px){
+          display: block; background: rgba($color2, 0);padding: 00px;
+      }}
+}
+  

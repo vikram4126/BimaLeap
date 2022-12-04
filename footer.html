@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Boostrap 5.0 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <!-- AOS  -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <link href="css/base.min.css" rel="stylesheet"> 
+  <link href="css/footer.css" rel="stylesheet"> 
+  <link rel="preconnect"
+    href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" />
+  <script src="https://use.fontawesome.com/2cf98465c1.js"></script>
+
+  <title>Bimaleap</title>
+</head>
+
+<body>
+ 
+  <!-- footer section-->
+  <footer class="section-footer">
+    <section class="section footer">
+      <div class="container-lg">
+        <div class="grid-footer">
+          <div class="grid-footer-disc">
+            <div class="logo"><img src="images/logo-bimaleap-black.png" class="img-fluid"></div>
+            <div class="content">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias consequuntur qui fugiat dolorum
+                fuga, cum rem facere et, repudiandae temporibus praesentium quo autem aperiam possimus cumque dolore?
+                Est, quam praesentium.</p>
+
+            </div> <a class="_btn">Read more</a>
+          </div>
+          <div class="grid-footer-product">
+            <h5>PRODUCTS</h5>
+            <ul class="list-arrow">
+              <li><a href="javascript:void(0)">Private Car Insurance </a></li>
+              <li><a href="javascript:void(0)">Two Wheeler Insurance</a></li>
+              <li><a href="javascript:void(0)">Health Insurance Insurance</a></li>
+              <li><a href="javascript:void(0)">Travel Insurance Insurance</a></li>
+              <li><a href="javascript:void(0)">Term Insurance Insurance</a></li>
+              <li><a href="javascript:void(0)">IPA Insurance Insurance</a></li>
+              <li><a href="javascript:void(0)">Critical Insurance Insurance</a></li>
+              <li><a href="javascript:void(0)">Home Insurance Insurance</a></li>
+            </ul>
+          </div>
+          <div class="grid-footer-info">
+            <h5>Info Links</h5>
+            <ul class="list-arrow">
+              <li><a href="javascript:void(0)">Home </a></li>
+              <li><a href="javascript:void(0)">Products </a></li>
+              <li><a href="javascript:void(0)">Claims </a></li>
+              <li><a href="javascript:void(0)">Renewals </a></li>
+              <li><a href="javascript:void(0)">Become an Agent </a></li>
+              <li><a href="javascript:void(0)">Privacy Policy </a></li>
+              <li><a href="javascript:void(0)">Cancellation & Refund </a></li>
+            </ul>
+          </div>
+          <div class="grid-footer-contact">
+            <h5>Contact Us</h5>
+            <p>White horse insurance broker private limited 
+              SCO&nbsp;86&nbsp;Sector&nbsp;17, Urban&nbsp;Estate&nbsp;Thanesar, 
+              Kurukshetra, Haryana, India, 136118</p>
+            <p>irda licence number<br>
+              789 direct (life & general)</p>
+            <p>license valid till<br>
+              23-dec-2024</p>
+            <div class="footer-social-links">
+              <ul>
+                <li><a class="facbook" href=""></a></li>
+                <li><a href="twitter"></a></li>
+                <li><a href="instagram"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="copyright">
+      <div class="container-lg">
+        <div class="row">
+          <div class="col2">
+            <div class="copyright-outter">
+              <div class="copyright-content">Copyright © 2022 Bimaleap. All Rights Reserved</div>
+              <div class="copyright-button">
+                <a class="_btn _btn-1-fill">Get Started Today</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </footer>
+
+
+  <script>
+
+    // When the user scrolls the page, execute myFunction
+    window.onscroll = function () {
+      myFunction();
+    };
+
+    // Get the navbar
+    var navbar = document.getElementById("navbar");
+
+    // Get the offset position of the navbar
+    var sticky = navbar.offsetTop;
+
+    // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky");
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+  </script>
+
+  <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script> 
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var sliderAboutUs = new Swiper(".slider-about-us", {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      autoHeight: true,
+      pagination: {
+        el: ".slider-about-us-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".slider-about-us-next",
+        prevEl: ".slider-about-us-prev",
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+
+        },
+        768: {
+          slidesPerView: 3,
+
+        },
+        1024: {
+          slidesPerView: 3,
+
+        },
+        1200: {
+          slidesPerView: 4,
+
+        },
+      },
+    });
+  </script>
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+  <script>
+    AOS.init({
+      offset: 120,
+    });
+  </script>
+
+  <!-- custom code -->
+  <script type="text/javascript" src="js/script-vk.js"> </script>
+
+</body>
+
+</html>
