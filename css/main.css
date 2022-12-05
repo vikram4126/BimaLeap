@@ -101,14 +101,10 @@
   cursor: pointer;
 }
 
-.banner .grid-banner-list li:hover .insurance-list-image {
-  border-color: #ff7953;
-}
-
-.banner .grid-banner-list li:hover .insurance-list-image::before {
+.banner .grid-banner-list li::before {
   content: "";
   position: absolute;
-  top: 100%;
+  top: 50%;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -116,6 +112,14 @@
   border-right: 10px solid transparent;
   border-top: 15px solid #ff7953;
   border-bottom: 10px solid transparent;
+}
+
+.banner .grid-banner-list li:hover .insurance-list-image {
+  border-color: #ff7953;
+}
+
+.banner .grid-banner-list li:hover .insurance-list-image::before {
+  top: 100%;
 }
 
 .banner .grid-banner-list .insurance-list-image {
@@ -153,6 +157,39 @@
 .banner .grid-banner-list .insurance-list-name span {
   display: block;
   font-weight: 400;
+}
+
+.number-diy {
+  margin-top: 15px;
+}
+
+.number-diy .data ._number {
+  background: #942a1a;
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0px -4px 32px -17px rgba(0, 0, 0, 0.35);
+          box-shadow: inset 0px -4px 32px -17px rgba(0, 0, 0, 0.35);
+  color: #ffffff;
+  line-height: 32px;
+  padding: 10px 2px !important;
+  width: 36px !important;
+  height: 48px !important;
+  margin: 0 1px 0 2px !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  font-size: 32px !important;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.number-diy .data ._number div {
+  height: 23px !important;
+}
+
+.number-diy .data ._number div span {
+  width: 30px !important;
 }
 
 .section-contact {
@@ -359,8 +396,15 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-grid-columns: (minmax(200px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 576px) {
+  .grid-partners {
+    -ms-grid-columns: (minmax(200px, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
 }
 
 @media (min-width: 1200px) {

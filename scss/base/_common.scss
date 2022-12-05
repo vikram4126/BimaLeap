@@ -57,17 +57,22 @@
 .counter-row {
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 
   @media (min-width: 576px) {
     grid-template-columns: repeat(2, 1fr);
+
   }
   @media (min-width: 992px) {
     grid-template-columns: repeat(4, 1fr);
   }
   ._card {
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    align-items: center; justify-content: center; text-align: center;
+    @media (min-width: 576px) {
+      flex-direction: row;justify-content: flex-start;text-align: left;
+      
+    }
     ._card-image {
       width: 80px;
       height: 80px;
