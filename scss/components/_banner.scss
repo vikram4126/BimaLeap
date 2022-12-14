@@ -1,8 +1,11 @@
 .banner {
   padding: 120px 0 80px 0;
   &.banner-home {
-    background: url(../images/banner-home-bg.png) center bottom no-repeat;
+    // background: url(../images/banner-home-bg.png) center bottom no-repeat;
     background-size: cover;
+  }
+  h1{
+    span{font-weight: 700;}
   }
   .grid-col-right {
     display: flex;
@@ -109,7 +112,8 @@
   }
 }
 
-.number-diy { margin-top: 15px;
+.number-diy {
+  margin-top: 15px;
 }
 .number-diy .data ._number {
   background: $color3;
@@ -118,14 +122,18 @@
   color: $white;
   line-height: 32px;
   padding: 10px 2px !important;
-  width: 36px!important;
+  width: 36px !important;
   height: 48px !important;
-  margin: 0 1px 0 2px !important; display: flex;text-align: center;
-  font-size: 32px !important; justify-content: center;
-  div{
-    height: 23px!important;
-    span{width: 30px!important;}
+  margin: 0 1px 0 2px !important;
+  display: flex;
+  text-align: center;
+  font-size: 32px !important;
+  justify-content: center;
+  div {
+    height: 23px !important;
+    span {
+      width: 30px !important;
+    }
   }
 }
-.number-diy .data ._number span {
-}
+ 

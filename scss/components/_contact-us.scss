@@ -6,13 +6,13 @@
   padding: 0px 0;
   background: none;
   @media (min-width: 992px) {
-    background: url(../images/bg-building.png) center bottom no-repeat #fff;
+    // background: url(../images/bg-building.png) center bottom no-repeat #fff;
   }
   &::before,
   &::after {
     content: "";
     display: none;
-    position: absolute;
+    position: absolute; 
     left: 0;
     top: 0;
     width: 50%;

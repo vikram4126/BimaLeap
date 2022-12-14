@@ -1,10 +1,9 @@
-
 // slider about us
-.section-about-us{
-  background: url(../images/bg-gray.jpg) center bottom no-repeat;
+.section-about-us {
+  // background: url(../images/bg-gray.jpg) center bottom no-repeat;
   background-size: cover;
 }
-.slider-about-us {  
+.slider-about-us {
   .swiper-slide {
     display: flex;
   }
@@ -15,9 +14,9 @@
     height: auto;
     ._card-image {
       position: relative;
+      display: none;
       margin-bottom: 20px;
       overflow: hidden;
-      display: inline-block;
       > img {
         padding: 10px 0 0 0px;
         background: $gray-light;
@@ -28,12 +27,26 @@
     ._card-content {
       min-height: auto;
       max-height: auto;
+      position: relative;
+      text-align: justify;
+      font-style: italic;
+
       @media (min-width: 768px) {
         min-height: 180px;
         max-height: 180px;
       }
       p {
-        text-align: left;
+        font-weight: 700;
+        &::before, &::after {
+          content: '"';
+          font-size: 3rem;
+          display: inline;
+          margin-right: 10px;
+          line-height: 0px;
+          position: relative;
+          bottom:-12px; font-family: 'Times New Roman', Times, serif; color: $color2;
+        }
+        &::after {bottom: -25px; margin-left:5px; margin-right: 0;display: none;}
       }
     }
     .star-set {
@@ -43,11 +56,11 @@
     }
     ._card-footer {
       margin-top: auto;
-      padding-top: 25px;
+      padding-top: 25px;  
       span {
         display: block;
         color: $color2;
-        font-weight: 500;
+        font-weight: 700;
       }
     }
   }
