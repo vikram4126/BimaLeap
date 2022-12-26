@@ -1,6 +1,9 @@
 // @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,700;1,400;1,700&display=swap");
 // @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Roboto:wght@300;400;700;900&display=swap');
  
 
 *{margin: 0; padding: 0; list-style-type: none; box-sizing: border-box; transition: all .2s linear;}
@@ -15,7 +18,8 @@ html {
 body {
   // font-family: "Poppins", sans-serif;
 //   font-family: "Montserrat", sans-serif;
-font-family: 'Inter', sans-serif;
+// font-family: 'Inter', sans-serif;
+font-family: 'Roboto', sans-serif;
   font-size: 16px;
   background: #ffffff;   color: #282828;
 } 

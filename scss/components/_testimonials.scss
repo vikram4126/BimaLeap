@@ -1,10 +1,11 @@
-
 // slider about us
-.section-about-us{
-  background: url(../images/bg-gray.jpg) center bottom no-repeat;
+.section-about-us {
+  // background: url(../images/bg-gray.jpg) center bottom no-repeat;
   background-size: cover;
+  background: $color1;  padding: 2.5rem 0;
+  h2 {color: $white;}
 }
-.slider-about-us {  
+.slider-about-us {
   .swiper-slide {
     display: flex;
   }
@@ -15,9 +16,9 @@
     height: auto;
     ._card-image {
       position: relative;
+      display: none;
       margin-bottom: 20px;
       overflow: hidden;
-      display: inline-block;
       > img {
         padding: 10px 0 0 0px;
         background: $gray-light;
@@ -28,12 +29,17 @@
     ._card-content {
       min-height: auto;
       max-height: auto;
+      position: relative;
+      text-align: justify;
+      color: $black; margin-bottom: 20px;
+
       @media (min-width: 768px) {
         min-height: 180px;
         max-height: 180px;
       }
       p {
-        text-align: left;
+       
+        strong{ font-size: 1.1rem;}
       }
     }
     .star-set {
@@ -42,13 +48,16 @@
       top: 0px;
     }
     ._card-footer {
-      margin-top: auto;
-      padding-top: 25px;
+      margin-top: auto; 
+      padding-top: 25px; display: grid; gap: 15px; grid-template-columns: 1fr 6fr;  font-weight: 700; align-items: center;
       span {
         display: block;
-        color: $color2;
-        font-weight: 500;
+        color: $color1; 
       }
+      ._card-thumb{ border-radius:10px ; overflow: hidden; width: 50px;
+        
+      }
+      ._card-thumb-text{ line-height: 18px;font-size: 14px;}
     }
   }
 }

@@ -1,8 +1,10 @@
 // insurance-adv
 
 .insurance-adv {
-  background: url(../images/bg-red-img.jpg) center center no-repeat;
+  // background: url(../images/bg-red-img.jpg) center center no-repeat;
   background-size: cover;
+  background: $color1;position: relative; padding-bottom: 10px;
+  &::before{content: ''; width: 100%; height: calc(5rem + 10px); background: $gray-light; position: absolute; bottom: 0; left: 0;}
 } 
 .grid-insurance-adv {
   &._card {
@@ -10,16 +12,12 @@
     padding: 20px;
     overflow: hidden;
     height: 100%;
-    ._card-image {
-      position: relative;
-      right: auto;
-      bottom: auto;
-      z-index: 100; margin:0 -20px -20px -20px;
-      @media (min-width: 992px) {
-        position: absolute; margin:0;
+    ._card-image { 
+      z-index: 100; margin:0 -20px -20px -20px;  position: absolute; margin:0;
       right: 0;
-      bottom: 0;
-      z-index: 99;
+      bottom: 0;  z-index: 99; opacity: .4;
+      @media (min-width: 992px) {
+       opacity: 1; 
       }
       img {
         width: 100%;
@@ -34,10 +32,10 @@
       margin-top: auto;
     }
     ._card-head {
-      margin: 10px 0 20px 0;
+      margin: 10px 0 20px 0; font-size: 1.6rem; line-height: 1.8rem;
       span {
         font-weight: 800;
-        color: $color2;
+        color: $color1  ;
       }
     }
   }

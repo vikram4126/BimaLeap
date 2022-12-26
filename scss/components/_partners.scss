@@ -16,6 +16,6 @@
   // @media(min-width:1023px){grid-template-columns: repeat(5, 1fr);}
   // @media(min-width:1200px){grid-template-columns: repeat(6, 1fr);}
   .partner-logo {
-    border: 1px solid $gray-light; text-align: center;
+    border: 1px solid darken($gray-light, 5%); text-align: center;
   }
 }

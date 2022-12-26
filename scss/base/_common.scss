@@ -57,14 +57,40 @@
 .counter-row {
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(2, 1fr);
-
+  grid-template-columns: repeat(2, 1fr); 
   @media (min-width: 576px) {
-    grid-template-columns: repeat(2, 1fr);
-
+    grid-template-columns: repeat(2, 1fr); 
   }
   @media (min-width: 992px) {
     grid-template-columns: repeat(4, 1fr);
+  }
+  &.counter-row-2{
+    gap: 50px;
+    grid-template-columns: repeat(1, 1fr); 
+    @media (min-width: 768px) {
+      gap: 20px;
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @media (min-width:992px){
+       padding: 50px 0;
+    }
+    ._card{ background: transparent; border-radius: 0; text-align: center;  
+      &::before{
+        content: ''; position: absolute; left: 50%; bottom: -25px; transform: translateX(-50%); width: 30px; height: 3px;background: $color1;  
+        @media (min-width:768px){
+          width: 3px; height: 30px;left: 100%; bottom: 50%; transform: translateY(50%) translateX(0); 
+      }
+      }
+      &:nth-last-child(1){
+        &::before{display: none;}
+      }
+    
+      &:nth-last-child(1){border-right: 0;}
+      ._card-image {display: none;}
+      ._card-number{ width: 100%;
+        .counter{font-size: 2.5rem; line-height: 2rem; margin-bottom: 10px; font-weight: 700;} 
+      }
+    }
   }
   ._card {
     flex-direction: column;
@@ -141,4 +167,32 @@
     padding: 00px 10px 10px 20px; position: relative;
     &::before{content: ''; width: 8px; height: 8px; border-right: 1px solid $gray-dark;border-bottom: 1px solid $gray-dark; transform: rotate(-45deg); position: absolute; left: 0; top: 7px;} 
   }
+}
+// Down arrow 
+.down-arrow {
+  width: 40px;
+  height: 20px;
+  border-radius: 40px 40px 0 0; 
+  position: relative;
+  background: $color1;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 90%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 12px;
+    height: 12px;
+    background: $color1;
+  }
+   
+}
+
+@font-face {
+  font-family: 'technology';
+  src: url('fonts/Technology-Regular.woff2') format('woff2'),
+      url('fonts/Technology-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }

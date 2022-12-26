@@ -1,11 +1,12 @@
 section {
-  padding: 40px 0px;
-  overflow: hidden;
+  padding: 2.50px 0px;
+  overflow: hidden; 
+  border-bottom: 0px solid rgba($color: #000000, $alpha: 0.08);
   &.section-sm {
-    padding: 40px 0;
+    padding: 2.5rem 0;
   }
   @media (min-width: 767px) {
-    padding: 80px 0px;
+    padding: 5rem 0;
   }
   .section-heading {
     text-align: center; 
@@ -14,6 +15,7 @@ section {
       margin-top: -5px;
     }
   }
+  
 }
 
 

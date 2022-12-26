@@ -1,6 +1,6 @@
 ._btn,
 a._btn {
-  padding: 12px 20px;
+  padding: 10px 20px;
   border: 1px solid $color1;
   font-weight: 700;
   text-align: center;
@@ -18,7 +18,7 @@ a._btn {
         }
     }
   &._btn-sm {
-    padding: 8px 20px;
+    padding: 5px 15px;
     font-weight: 500;
   }
   // button with border 
@@ -63,7 +63,7 @@ a._btn {
   }
 
   i{
-    margin-right:5px; margin-left: -10px;
+    margin-right:5px; margin-left: -8px;
     img{
       &:nth-child(1){display: inline;}
       &:nth-child(2){display: none;}
@@ -94,5 +94,8 @@ a._btn {
     &._btn-3-fill{
       &:hover{background: $color3; color: $white;} 
     } 
+  }
+  i{
+    svg {fill: $color1;}
   }
 }

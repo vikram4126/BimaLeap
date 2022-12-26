@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Roboto:wght@300;400;700;900&display=swap");
 .grid-container {
   position: relative;
   margin: 0 auto;
@@ -32,11 +32,11 @@
 }
 
 .bg-color1 {
-  background: #ff7953;
+  background: #D44F27;
 }
 
 .bg-color2 {
-  background: #42c2c8;
+  background: #D44F27;
 }
 
 .bg-black {
@@ -52,15 +52,15 @@
 }
 
 .bg-gray-light {
-  background: #f1f1f1;
+  background: #f2f2f2;
 }
 
 .text-color1 {
-  color: #ff7953;
+  color: #D44F27;
 }
 
 .text-color2 {
-  color: #42c2c8;
+  color: #D44F27;
 }
 
 .text-black {
@@ -76,7 +76,7 @@
 }
 
 .text-gray-light {
-  color: #f1f1f1;
+  color: #f2f2f2;
 }
 
 .list ul {
@@ -172,6 +172,78 @@
   }
 }
 
+.counter-row.counter-row-2 {
+  gap: 50px;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 768px) {
+  .counter-row.counter-row-2 {
+    gap: 20px;
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .counter-row.counter-row-2 {
+    padding: 50px 0;
+  }
+}
+
+.counter-row.counter-row-2 ._card {
+  background: transparent;
+  border-radius: 0;
+  text-align: center;
+}
+
+.counter-row.counter-row-2 ._card::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -25px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 30px;
+  height: 3px;
+  background: #D44F27;
+}
+
+@media (min-width: 768px) {
+  .counter-row.counter-row-2 ._card::before {
+    width: 3px;
+    height: 30px;
+    left: 100%;
+    bottom: 50%;
+    -webkit-transform: translateY(50%) translateX(0);
+            transform: translateY(50%) translateX(0);
+  }
+}
+
+.counter-row.counter-row-2 ._card:nth-last-child(1)::before {
+  display: none;
+}
+
+.counter-row.counter-row-2 ._card:nth-last-child(1) {
+  border-right: 0;
+}
+
+.counter-row.counter-row-2 ._card ._card-image {
+  display: none;
+}
+
+.counter-row.counter-row-2 ._card ._card-number {
+  width: 100%;
+}
+
+.counter-row.counter-row-2 ._card ._card-number .counter {
+  font-size: 2.5rem;
+  line-height: 2rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
 .counter-row ._card {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -203,7 +275,7 @@
   width: 80px;
   height: 80px;
   margin-right: 15px;
-  background: #f1f1f1;
+  background: #f2f2f2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -227,7 +299,7 @@
   width: 40px;
   height: 40px;
   border-radius: 50px;
-  border: 1px solid #42c2c8;
+  border: 1px solid #D44F27;
   position: relative;
   background: #ffffff;
 }
@@ -241,7 +313,7 @@
           transform: translate(-50%, -50%);
   width: 15px;
   height: 1px;
-  background: #42c2c8;
+  background: #D44F27;
   margin-left: -2px;
 }
 
@@ -254,8 +326,8 @@
           transform: translateY(-50%) rotate(-45deg);
   width: 8px;
   height: 8px;
-  border-right: 1px solid #42c2c8;
-  border-bottom: 1px solid #42c2c8;
+  border-right: 1px solid #D44F27;
+  border-bottom: 1px solid #D44F27;
   margin-bottom: -2px;
 }
 
@@ -277,7 +349,7 @@
 }
 
 .star-set .star-set-inner.star-box {
-  border: 1px solid #42c2c8;
+  border: 1px solid #D44F27;
   padding: 8px;
   border-radius: 40px;
 }
@@ -305,6 +377,34 @@
   top: 7px;
 }
 
+.down-arrow {
+  width: 40px;
+  height: 20px;
+  border-radius: 40px 40px 0 0;
+  position: relative;
+  background: #D44F27;
+}
+
+.down-arrow::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 90%;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+  width: 12px;
+  height: 12px;
+  background: #D44F27;
+}
+
+@font-face {
+  font-family: 'technology';
+  src: url("fonts/Technology-Regular.woff2") format("woff2"), url("fonts/Technology-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -330,7 +430,7 @@ html {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
   background: #ffffff;
   color: #282828;
@@ -400,13 +500,13 @@ h1 {
   font-size: 2.5rem !important;
   line-height: 2.5rem !important;
   margin-bottom: 24px;
-  color: #ff7953;
+  color: #D44F27;
 }
 
 h1 span {
   font-size: 1rem;
   line-height: 1.4rem;
-  font-weight: 500;
+  font-weight: 700;
   display: block;
   color: #000000;
   margin-top: 10px;
@@ -416,6 +516,49 @@ h2 {
   font-size: 2rem;
   line-height: 2.5rem;
   margin-bottom: 24px;
+  position: relative;
+  font-weight: 700;
+}
+
+h2.text-white span:before {
+  background: #ffffff;
+}
+
+h2.text-white span:after {
+  background: #ffffff;
+}
+
+h2 span {
+  padding-bottom: 28px;
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: block;
+}
+
+h2 span::before {
+  content: "";
+  width: 200px;
+  height: 4px;
+  background: #D44F27;
+  position: absolute;
+  bottom: 6px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+h2 span::after {
+  content: "";
+  width: 18px;
+  height: 18px;
+  background: #D44F27;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-radius: 30px;
 }
 
 @media (min-width: 768px) {
@@ -486,8 +629,8 @@ h5 {
 
 ._btn,
 a._btn {
-  padding: 12px 20px;
-  border: 1px solid #ff7953;
+  padding: 10px 20px;
+  border: 1px solid #D44F27;
   font-weight: 700;
   text-align: center;
   min-width: 170px;
@@ -501,7 +644,7 @@ a._btn {
 
 ._btn:hover,
 a._btn:hover {
-  background: #ff7953;
+  background: #D44F27;
   color: #ffffff;
 }
 
@@ -517,7 +660,7 @@ a._btn:hover i img:nth-child(2) {
 
 ._btn._btn-sm,
 a._btn._btn-sm {
-  padding: 8px 20px;
+  padding: 5px 15px;
   font-weight: 500;
 }
 
@@ -534,27 +677,27 @@ a._btn._btn-blank:hover {
 
 ._btn._btn-1,
 a._btn._btn-1 {
-  border-color: #ff7953;
+  border-color: #D44F27;
   background: #ffffff;
-  color: #ff7953;
+  color: #D44F27;
 }
 
 ._btn._btn-1:hover,
 a._btn._btn-1:hover {
-  background: #ff7953;
+  background: #D44F27;
   color: #ffffff;
 }
 
 ._btn._btn-2,
 a._btn._btn-2 {
-  border-color: #42c2c8;
+  border-color: #D44F27;
   background: #ffffff;
-  color: #42c2c8;
+  color: #D44F27;
 }
 
 ._btn._btn-2:hover,
 a._btn._btn-2:hover {
-  background: #42c2c8;
+  background: #D44F27;
   color: #ffffff;
 }
 
@@ -573,28 +716,28 @@ a._btn._btn-3:hover {
 
 ._btn._btn-1-fill,
 a._btn._btn-1-fill {
-  border-color: #ff7953;
-  background: #ff7953;
+  border-color: #D44F27;
+  background: #D44F27;
   color: #ffffff;
 }
 
 ._btn._btn-1-fill:hover,
 a._btn._btn-1-fill:hover {
   background: #ffffff;
-  color: #ff7953;
+  color: #D44F27;
 }
 
 ._btn._btn-2-fill,
 a._btn._btn-2-fill {
-  border-color: #42c2c8;
-  background: #42c2c8;
+  border-color: #D44F27;
+  background: #D44F27;
   color: #ffffff;
 }
 
 ._btn._btn-2-fill:hover,
 a._btn._btn-2-fill:hover {
   background: #ffffff;
-  color: #42c2c8;
+  color: #D44F27;
 }
 
 ._btn._btn-3-fill,
@@ -613,7 +756,7 @@ a._btn._btn-3-fill:hover {
 ._btn i,
 a._btn i {
   margin-right: 5px;
-  margin-left: -10px;
+  margin-left: -8px;
 }
 
 ._btn i img:nth-child(1),
@@ -640,13 +783,13 @@ a._btn._btn-icon i {
 ._btn._btn-icon._btn-1:hover,
 a._btn._btn-icon._btn-1:hover {
   background: #ffffff;
-  color: #ff7953;
+  color: #D44F27;
 }
 
 ._btn._btn-icon._btn-2:hover,
 a._btn._btn-icon._btn-2:hover {
   background: #ffffff;
-  color: #42c2c8;
+  color: #D44F27;
 }
 
 ._btn._btn-icon._btn-3:hover,
@@ -657,13 +800,13 @@ a._btn._btn-icon._btn-3:hover {
 
 ._btn._btn-icon._btn-1-fill:hover,
 a._btn._btn-icon._btn-1-fill:hover {
-  background: #ff7953;
+  background: #D44F27;
   color: #ffffff;
 }
 
 ._btn._btn-icon._btn-2-fill:hover,
 a._btn._btn-icon._btn-2-fill:hover {
-  background: #42c2c8;
+  background: #D44F27;
   color: #ffffff;
 }
 
@@ -673,18 +816,24 @@ a._btn._btn-icon._btn-3-fill:hover {
   color: #ffffff;
 }
 
+._btn i svg,
+a._btn i svg {
+  fill: #D44F27;
+}
+
 section {
-  padding: 40px 0px;
+  padding: 2.50px 0px;
   overflow: hidden;
+  border-bottom: 0px solid rgba(0, 0, 0, 0.08);
 }
 
 section.section-sm {
-  padding: 40px 0;
+  padding: 2.5rem 0;
 }
 
 @media (min-width: 767px) {
   section {
-    padding: 80px 0px;
+    padding: 5rem 0;
   }
 }
 
