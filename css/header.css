@@ -18,24 +18,49 @@
   width: 100%;
   z-index: 111;
   color: #fff;
+  color: #ffffff;
 }
 
 .top-navbar.sticky {
   border-bottom: 1px solid rgba(212, 79, 39, 0.2);
   background: #ffffff;
-  color: #282828;
+  color: #ffffff;
+}
+
+@media (min-width: 1200px) {
+  .top-navbar.sticky {
+    color: #282828;
+  }
 }
 
 .top-navbar.sticky .top-menu-set .top-menu ul li.dropdown {
-  color: #282828;
+  color: #ffffff;
+}
+
+@media (min-width: 1200px) {
+  .top-navbar.sticky .top-menu-set .top-menu ul li.dropdown {
+    color: #282828;
+  }
 }
 
 .top-navbar.sticky .top-menu-set .top-menu ul li.dropdown::before {
-  color: #282828;
+  color: #ffffff;
+}
+
+@media (min-width: 1200px) {
+  .top-navbar.sticky .top-menu-set .top-menu ul li.dropdown::before {
+    color: #282828;
+  }
 }
 
 .top-navbar.sticky .top-menu-set .top-menu ul li a {
-  color: #282828;
+  color: #ffffff;
+}
+
+@media (min-width: 1200px) {
+  .top-navbar.sticky .top-menu-set .top-menu ul li a {
+    color: #282828;
+  }
 }
 
 .top-navbar.sticky .top-menu-set .top-menu ul li:hover.dropdown::before {
@@ -45,6 +70,7 @@
 @media (min-width: 1200px) {
   .top-navbar {
     padding: 00px 15px;
+    background: transparent;
   }
 }
 
@@ -98,6 +124,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background: #D44F27;
 }
 
 @media (min-width: 768px) {
@@ -153,9 +180,13 @@
 }
 
 .top-navbar .top-menu-set .top-menu ul li {
-  display: inline-block;
+  display: block;
   position: relative;
   border-bottom: 1px solid #ffffff;
+}
+
+.top-navbar .top-menu-set .top-menu ul li:nth-last-child(1) {
+  border-width: 0;
 }
 
 @media (min-width: 1200px) {
@@ -163,6 +194,7 @@
     border-bottom: 0;
     padding-top: 0px;
     padding-bottom: 0px;
+    display: inline-block;
   }
 }
 
@@ -197,7 +229,13 @@
 }
 
 .top-navbar .top-menu-set .top-menu ul li.dropdown li a {
-  color: #282828;
+  color: #ffffff;
+}
+
+@media (min-width: 1200px) {
+  .top-navbar .top-menu-set .top-menu ul li.dropdown li a {
+    color: #282828;
+  }
 }
 
 .top-navbar .top-menu-set .top-menu ul li.dropdown li a:hover {
@@ -234,6 +272,7 @@
   min-width: auto;
   color: #ffffff;
   padding: 10px;
+  display: inline-block;
 }
 
 @media (min-width: 1200px) {

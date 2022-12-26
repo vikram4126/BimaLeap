@@ -131,10 +131,12 @@
 
 .banner.bnnner-video-bg video {
   position: absolute;
-  left: 0;
+  left: 50%;
   top: 0;
   min-width: 100%;
   z-index: 1;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   min-height: 100%;
 }
 
@@ -731,9 +733,9 @@
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
   border-top: 0px solid #D44F27;
-  background: url(../images/product-section-grid-bg.png) right center no-repeat #ffffff;
+  background: url(../images/product-section-grid-bg.png) right bottom no-repeat #ffffff;
   border-radius: 15px;
-  padding: 30px 30px;
+  padding: 0;
   position: relative;
 }
 
@@ -760,6 +762,7 @@
     -ms-grid-columns: 2.5fr 1.5fr;
         grid-template-columns: 2.5fr 1.5fr;
     min-height: 500px;
+    padding: 30px 30px;
   }
 }
 
@@ -769,16 +772,16 @@
   gap: 18px;
   margin-top: 50px;
   margin-bottom: 20px;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
   text-align: center;
   padding-left: 8px;
 }
 
 @media (min-width: 576px) {
   .grid-banner-list {
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
     gap: 28px;
   }
 }
