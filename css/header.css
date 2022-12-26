@@ -363,6 +363,14 @@
   width: 100%;
 }
 
+.top-navbar .top-menu-set .top-menu .main-menu ul li:nth-last-child(1) {
+  border-width: 1px;
+}
+
+.top-navbar .top-menu-set .top-menu .main-menu ul li.dropdown ul li:nth-last-child(1) {
+  border-width: 0;
+}
+
 @media (min-width: 1200px) {
   .top-navbar .top-menu-set .top-menu .main-menu {
     width: auto;

@@ -255,6 +255,18 @@
       }
       .main-menu {
         width: 100%;
+        ul{
+          li{
+            &:nth-last-child(1){ border-width: 1px;}
+            &.dropdown{
+              ul{
+                li{
+                  &:nth-last-child(1){border-width: 0;}
+                }
+              }
+            }
+          }
+        }
         @media (min-width: 1200px) {
           width: auto;
         }
