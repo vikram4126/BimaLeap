@@ -664,6 +664,14 @@ a._btn._btn-sm {
   font-weight: 500;
 }
 
+._btn._btn-sm i img,
+a._btn._btn-sm i img {
+  width: 24px;
+  margin-left: -4px;
+  margin-top: -2px;
+  margin-bottom: -2px;
+}
+
 ._btn._btn-blank,
 a._btn._btn-blank {
   border-width: 0;
