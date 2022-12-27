@@ -19,12 +19,16 @@
   z-index: 111;
   color: #fff;
   color: #ffffff;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 .top-navbar.sticky {
   border-bottom: 1px solid rgba(212, 79, 39, 0.2);
   background: #ffffff;
   color: #ffffff;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
 }
 
 @media (min-width: 1200px) {

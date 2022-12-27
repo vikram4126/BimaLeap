@@ -119,13 +119,13 @@
 }
 
 .banner.bnnner-video-bg::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.7);
   z-index: 2;
 }
 
@@ -177,7 +177,7 @@
   letter-spacing: 10px;
   line-height: 34px;
   font-weight: 700;
-  font-family: 'technology';
+  font-family: "technology";
 }
 
 .section-contact {
@@ -350,7 +350,7 @@
 }
 
 .counter-section {
-  background: url(../images/bg-map.png) center bottom no-repeat #ffffff;
+  background: url(../images/bg-map-india.png) center bottom no-repeat #ffffff;
   background-size: cover;
 }
 
@@ -459,13 +459,13 @@
   text-align: center;
 }
 
-.section-about-us {
+.testimonials-section {
   background-size: cover;
   background: #D44F27;
   padding: 2.5rem 0;
 }
 
-.section-about-us h2 {
+.testimonials-section h2 {
   color: #ffffff;
 }
 
@@ -639,6 +639,10 @@
           transform: rotate(180deg);
 }
 
+.why-insurance-section {
+  background: #f2f2f2;
+}
+
 .customize-card {
   display: -ms-grid;
   display: grid;
@@ -724,6 +728,7 @@
   overflow: visible;
   z-index: 101;
   position: relative;
+  padding-top: 0;
 }
 
 .grid-product {
@@ -808,11 +813,18 @@
 }
 
 .grid-banner-list li:hover .insurance-list-image img:nth-child(1) {
-  display: none;
+  opacity: 0;
+  position: absolute;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .grid-banner-list li:hover .insurance-list-image img:nth-child(2) {
-  display: block;
+  opacity: 1;
+  left: -0px;
+  position: relative;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .grid-banner-list .insurance-list-image {
@@ -842,7 +854,7 @@
 .grid-banner-list .insurance-list-image::before {
   content: "";
   position: absolute;
-  top: 95%;
+  top: 97%;
   left: 50%;
   width: 10px;
   height: 10px;
@@ -850,22 +862,31 @@
           transform: translateX(-50%);
   border-left: 1px solid transparent;
   border-top: 1px solid transparent;
-  border-right: 2px solid #D44F27;
-  border-bottom: 2px solid #D44F27;
+  border-right: 3px solid #D44F27;
+  border-bottom: 3px solid #D44F27;
   -webkit-transition: all .3s linear;
   transition: all .3s linear;
   -webkit-transform: rotate(45deg) translateX(-50%);
           transform: rotate(45deg) translateX(-50%);
   opacity: 0;
   background: #ffffff;
+  border-radius: 2px;
 }
 
 .grid-banner-list .insurance-list-image img:nth-child(1) {
-  display: block;
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .grid-banner-list .insurance-list-image img:nth-child(2) {
-  display: none;
+  opacity: 0;
+  position: absolute;
+  left: -10px;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-transform-origin: center;
+          transform-origin: center;
 }
 
 .grid-banner-list .insurance-list-name {
@@ -907,9 +928,5 @@
     z-index: 100;
     width: 200px;
   }
-}
-
-.why-insurance-section {
-  background: #f2f2f2;
 }
 /*# sourceMappingURL=main.css.map */
