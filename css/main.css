@@ -814,17 +814,10 @@
 
 .grid-banner-list li:hover .insurance-list-image img:nth-child(1) {
   opacity: 0;
-  position: absolute;
-  -webkit-transform: scale(1);
-          transform: scale(1);
 }
 
 .grid-banner-list li:hover .insurance-list-image img:nth-child(2) {
   opacity: 1;
-  left: -0px;
-  position: relative;
-  -webkit-transform: scale(1);
-          transform: scale(1);
 }
 
 .grid-banner-list .insurance-list-image {
@@ -875,18 +868,10 @@
 
 .grid-banner-list .insurance-list-image img:nth-child(1) {
   opacity: 1;
-  -webkit-transform: scale(1);
-          transform: scale(1);
 }
 
 .grid-banner-list .insurance-list-image img:nth-child(2) {
   opacity: 0;
-  position: absolute;
-  left: -10px;
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
-  -webkit-transform-origin: center;
-          transform-origin: center;
 }
 
 .grid-banner-list .insurance-list-name {
