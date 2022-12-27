@@ -61,8 +61,8 @@
           top: 100%; opacity: 1;
         }
         img{
-            &:nth-child(1){  opacity: 0;}
-            &:nth-child(2){ opacity: 1;}
+            &:nth-child(1){  display: none;}
+            &:nth-child(2){ display: block;}
         }
       }
     }
@@ -96,11 +96,11 @@
         transform: rotate(45deg) translateX(-50%); opacity: 0; background: $white; border-radius: 2px;
     }
     img{
-        &:nth-child(1){  opacity: 1;}
-        &:nth-child(2){  opacity: 0; }
+        &:nth-child(1){  display: block;}
+        &:nth-child(2){ display: none;}
     }
   }
-  
+
   .insurance-list-name {
     font-weight: 700;
     span {

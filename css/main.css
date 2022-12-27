@@ -813,11 +813,11 @@
 }
 
 .grid-banner-list li:hover .insurance-list-image img:nth-child(1) {
-  opacity: 0;
+  display: none;
 }
 
 .grid-banner-list li:hover .insurance-list-image img:nth-child(2) {
-  opacity: 1;
+  display: block;
 }
 
 .grid-banner-list .insurance-list-image {
@@ -867,11 +867,11 @@
 }
 
 .grid-banner-list .insurance-list-image img:nth-child(1) {
-  opacity: 1;
+  display: block;
 }
 
 .grid-banner-list .insurance-list-image img:nth-child(2) {
-  opacity: 0;
+  display: none;
 }
 
 .grid-banner-list .insurance-list-name {
