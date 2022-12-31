@@ -221,6 +221,11 @@
   margin-bottom: 0;
 }
 
+.section-footer .copyright .copyright-outter .copyright-button a {
+  color: #ffffff;
+  font-weight: bold;
+}
+
 .section-footer .footer-social-links ul {
   display: -webkit-box;
   display: -ms-flexbox;

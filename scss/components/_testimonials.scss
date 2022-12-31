@@ -62,32 +62,7 @@
   }
 }
 
-.slider-about-us-outter {
-  padding: 00px;
-  position: relative;
-  @media (min-width: 992px) {
-    padding: 0 40px;
-  }
-  .slider-controller {
-    position: relative;
-    right: auto;
-    top: auto;
-    transform: translateY(0);
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    margin-top: 20px;
-    @media (min-width: 992px) {
-      position: absolute;
-      right: -20px;
-      top: 50%;
-      transform: translateY(-50%);
-      z-index: 101;
-      display: flex;
-      flex-direction: column;
-      margin-top: 0;
-    }
-  }
+.slider-about-us-outter { 
   .slider-about-us-next,
   .slider-about-us-prev {
     left: auto;

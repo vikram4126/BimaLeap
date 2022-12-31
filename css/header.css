@@ -3,9 +3,9 @@
   display: -ms-flexbox;
   display: flex;
   background: transparent;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   padding: 10px 15px;
   font-size: 14px;
   border-bottom: 1px solid rgba(212, 79, 39, 0);
@@ -19,22 +19,30 @@
   z-index: 111;
   color: #fff;
   color: #ffffff;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .top-navbar.sticky {
   border-bottom: 1px solid rgba(212, 79, 39, 0.2);
   background: #ffffff;
   color: #ffffff;
-  -webkit-transition: all .2s linear;
-  transition: all .2s linear;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 
 @media (min-width: 1200px) {
   .top-navbar.sticky {
     color: #282828;
   }
+}
+
+.top-navbar.sticky .logo .red {
+  display: block;
+}
+
+.top-navbar.sticky .logo .red-white {
+  display: none;
 }
 
 .top-navbar.sticky .top-menu-set .top-menu ul li.dropdown {
@@ -71,6 +79,14 @@
   color: #282828;
 }
 
+@media (min-width: 992px) {
+  .top-navbar {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 @media (min-width: 1200px) {
   .top-navbar {
     padding: 00px 15px;
@@ -80,6 +96,21 @@
 
 .top-navbar .logo {
   margin-right: 30px;
+  width: 70%;
+}
+
+@media (min-width: 768px) {
+  .top-navbar .logo {
+    width: auto;
+  }
+}
+
+.top-navbar .logo .red {
+  display: none;
+}
+
+.top-navbar .logo .red-white {
+  display: block;
 }
 
 .top-navbar .top-menu-set {
@@ -91,7 +122,7 @@
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  padding: 10px 0;
+  padding: 00px 0;
   position: static;
 }
 
@@ -479,11 +510,11 @@
 }
 
 .top-navbar .top-menu-set .mobile-menu-btn {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   position: relative;
   border: 0px solid #D44F27;
-  padding: 8px;
+  padding: 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

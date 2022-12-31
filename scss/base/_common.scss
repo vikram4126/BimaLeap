@@ -125,7 +125,7 @@
   width: 40px;
   height: 40px;
   border-radius: 50px;
-  border: 1px solid $color2;
+  border: 1px solid $color1;
   position: relative;
   background: $white;
   &::before {
@@ -136,7 +136,7 @@
     transform: translate(-50%, -50%);
     width: 15px;
     height: 1px;
-    background: $color2; margin-left: -2px;
+    background: $color1; margin-left: -2px;
   }
   &::after {
     content: "";
@@ -146,15 +146,15 @@
     transform: translateY(-50%) rotate(-45deg);
     width: 8px;
     height: 8px;
-    border-right: 1px solid $color2;
-    border-bottom: 1px solid $color2; margin-bottom: -2px;
+    border-right: 1px solid $color1;
+    border-bottom: 1px solid $color1; margin-bottom: -2px;
   }
 }
 
 // star-set
 .star-set{margin-bottom: 15px; display: inline-block;
   .star-set-inner{display: flex; justify-content: center; align-items: center;   
-    &.star-box{ border:1px solid $color2; padding:8px; border-radius: 40px;}
+    &.star-box{ border:1px solid $color1; padding:8px; border-radius: 40px;}
      span{ margin: 0 3px; line-height: 0;}
   }
 

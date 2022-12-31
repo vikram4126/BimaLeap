@@ -1,7 +1,7 @@
 .top-navbar {
   display: flex;
   background: transparent;
-  align-items: center;
+  align-items: flex-start;
   padding: 10px 15px;
   font-size: 14px;
   border-bottom: 1px solid rgba($color1, 0);
@@ -12,13 +12,23 @@
   width: 100%;
   z-index: 111;
   color: #fff;
-  color: $white; transition: all .2s ease-in-out;
+  color: $white;
+  transition: all 0.2s ease-in-out;
   &.sticky {
     border-bottom: 1px solid rgba($color1, 0.2);
     background: $white;
-    color: $white;transition: all .2s linear;
+    color: $white;
+    transition: all 0.2s linear;
     @media (min-width: 1200px) {
       color: #282828;
+    }
+    .logo {
+      .red {
+        display: block;
+      }
+      .red-white {
+        display: none;
+      }
     }
     .top-menu-set {
       .top-menu {
@@ -54,19 +64,32 @@
       }
     }
   }
+  @media (min-width: 992px) {
+    align-items: center;
+  }
   @media (min-width: 1200px) {
     padding: 00px 15px;
     background: transparent;
   }
   .logo {
     margin-right: 30px;
+    width: 70%;
+    @media (min-width: 768px) {
+      width: auto;
+    }
+    .red {
+      display: none;
+    }
+    .red-white {
+      display: block;
+    }
   }
   .top-menu-set {
     width: 100%;
     position: relative;
     display: flex;
     justify-content: flex-end;
-    padding: 10px 0;
+    padding: 00px 0;
     position: static;
     @media (min-width: 992px) {
       width: 100%;
@@ -116,7 +139,9 @@
           display: block;
           position: relative;
           border-bottom: 1px solid $white;
-          &:nth-last-child(1){border-width: 0;}
+          &:nth-last-child(1) {
+            border-width: 0;
+          }
           @media (min-width: 1200px) {
             border-bottom: 0;
             padding-top: 0px;
@@ -147,7 +172,7 @@
                 color: $white;
                 @media (min-width: 1200px) {
                   color: #282828;
-                 }
+                }
                 &:hover {
                   color: $white;
                 }
@@ -200,7 +225,7 @@
               }
               &._btn-2-fill {
                 color: $white;
-                background: $color2;
+                background: $color1;
               }
               &._btn-3-fill {
                 color: $white;
@@ -213,7 +238,7 @@
                   background: $white;
                 }
                 &._btn-2-fill {
-                  color: $color2;
+                  color: $color1;
                   background: $white;
                 }
                 &._btn-3-fill {
@@ -255,13 +280,17 @@
       }
       .main-menu {
         width: 100%;
-        ul{
-          li{
-            &:nth-last-child(1){ border-width: 1px;}
-            &.dropdown{
-              ul{
-                li{
-                  &:nth-last-child(1){border-width: 0;}
+        ul {
+          li {
+            &:nth-last-child(1) {
+              border-width: 1px;
+            }
+            &.dropdown {
+              ul {
+                li {
+                  &:nth-last-child(1) {
+                    border-width: 0;
+                  }
                 }
               }
             }
@@ -342,11 +371,11 @@
       }
     }
     .mobile-menu-btn {
-      width: 50px;
-      height: 50px;
+      width: 30px;
+      height: 30px;
       position: relative;
       border: 0px solid $color1;
-      padding: 8px;
+      padding: 0px;
       display: flex;
       flex-direction: column;
       border-radius: 10px;

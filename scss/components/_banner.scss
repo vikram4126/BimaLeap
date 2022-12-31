@@ -1,44 +1,97 @@
-.bannerSlider {
+.banner-slider {
   height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  @media (min-width: 992px) {
+  position: relative;
+  .img-bg {
+    width: 100%;
+   height: auto;
+    position: absolute;
+    right: 0;
+    bottom: -70px;  
+    z-index: 99; display: none;
+    @media (min-width: 768px) {
+      width: 50%; 
+      right: 0;
+      bottom: 0;  display: block;
+    }
+    
   }
-
+  .container-lg{z-index: 100;}
   .swiper-wrapper {
     .swiper-slide {
       display: flex;
       justify-content: center;
       align-items: center;
+      background-color: $black ; position: relative;
+      @media (min-width: 768px) {
+        //  background: none !important;
+      }
     }
   }
-
   h1 {
     color: $white;
-    text-align: center;
+    text-align: left;
     span {
       color: $white;
     }
   }
-  .bannerSlider-pagination {
+  &-pagination {
     width: 100%;
     height: 30px;
     position: absolute;
     display: flex;
-    justify-content: center;
-    left: 50%;
-    bottom: 100px;
-    transform: translateX(-50%);
+    flex-direction: row;
+    justify-content: center; 
+    left: calc(100% - 30px)!important;
+    bottom:120px;
     z-index: 102;
+    @media(min-width:768px){
+      flex-direction: column; top: 50%;
+    transform: translateY(-50%);
+    }
     .swiper-pagination-bullet {
-      width: 25px;
+      width: 3px;
       height: 3px;
-      background: $white;
+      border-radius: 50px;
+      margin-top: 10px!important;
+      margin-bottom: 10px!important;
+      padding: 0px;
+      border: 4px solid transparent;
+      position: relative;
       opacity: 1;
-      border-radius: 0;
+      background: rgba($white, 0.5);
+      @media(min-width:768px){
+        margin-top: 10px!important;
+        margin-bottom: 10px!important;
+      }
+
+      &:hover {
+        border-color: $white;
+      }
+
+      &::before {
+        content: " ";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border: 2px solid transparent;
+        border-radius: 50px;
+        background: rgba($black, 0);
+        z-index: -1;
+      }
+
       &.swiper-pagination-bullet-active {
-        background: $color1;
+        background: rgba($white, 0.5);
+        border-color: $white;
+        &::before {
+          background: rgba($black, 0.5);
+          border-color: $white;
+        }
       }
     }
   }
