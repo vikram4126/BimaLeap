@@ -39,6 +39,7 @@
 
 .top-navbar.sticky .logo .red {
   display: block;
+  background-color: transparent !important;
 }
 
 .top-navbar.sticky .logo .red-white {
