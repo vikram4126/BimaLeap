@@ -345,7 +345,7 @@
   overflow: visible;
   margin-top: 30px;
   padding: 0px 0;
-  background: url(../images/bg-building.png) center bottom repeat-x #D44F27;
+  background: url(../assets/images/bg-building.png) center bottom repeat-x #D44F27;
   color: #ffffff;
 }
 
@@ -511,7 +511,7 @@
 }
 
 .counter-section {
-  background: url(../images/bg-map-india.png) center bottom no-repeat #ffffff;
+  background: url(../assets/images/bg-map-india.png) center bottom no-repeat #ffffff;
   background-size: cover;
 }
 
@@ -860,7 +860,7 @@
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
   border-top: 0px solid #D44F27;
-  background: url(../images/product-section-grid-bg.png) right top no-repeat #ffffff;
+  background: url(../assets/images/product-section-grid-bg.png) right top no-repeat #ffffff;
   border-radius: 15px;
   padding: 25px 15px;
   position: relative;

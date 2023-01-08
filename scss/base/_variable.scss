@@ -8,3 +8,19 @@ $gray: #d6d7da;
 $gray-dark: #2d2d2d;
 $gray-lighty: #9b9b9b;
 $gray-light: #f2f2f2;
+
+$red:#f34653;
+$red-hover:#c21c29;   
+$green:#23c57c;
+
+$xl: 1440px;
+$lg: 1200px;
+$md: 992px; 
+$sm: 768px;
+$xs: 576px;
+
+@mixin responsive_min($breakpoint){ 
+    @media( min-width:$breakpoint){
+        @content;
+    }
+}

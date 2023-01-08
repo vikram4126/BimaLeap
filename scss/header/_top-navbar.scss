@@ -24,7 +24,8 @@
     }
     .logo {
       .red {
-        display: block; background-color: transparent!important;
+        display: block;
+        background-color: transparent !important;
       }
       .red-white {
         display: none;
@@ -32,7 +33,7 @@
     }
     .top-menu-set {
       .top-menu {
-        ul { 
+        ul {
           li {
             &.dropdown {
               color: $white;
@@ -107,13 +108,19 @@
       top: 100%;
       flex-direction: column;
       z-index: 110;
-      background: transparent; 
+      background: transparent;
+      max-height: 90vh;
+      overflow-y: scroll;
+      overflow-x: hidden;
       &.active {
         display: flex;
         background: $color1;
       }
       @media (min-width: 768px) {
         width: 50%;
+        max-height: 80vh;
+        overflow-y: scroll;
+        overflow-x: hidden;
       }
       @media (min-width: 1200px) {
         position: relative;
@@ -127,10 +134,17 @@
         width: 100%;
         box-shadow: none;
         width: 100%;
+        height: auto;
+        overflow-y: visible;
+        overflow-x: visible;
       }
       ul {
         display: flex;
-        flex-direction: column; margin-bottom: 0; padding-left: 0;
+        flex-direction: column;
+        margin-bottom: 0;
+        padding-left: 0;
+        font-size: inherit;
+        position: relative;
         @media (min-width: 1200px) {
           flex-direction: row;
           align-items: center;
@@ -154,22 +168,39 @@
             @media (min-width: "1200px") {
               padding: 10px 18px;
             }
-            &::before {
-              content: "+";
-              position: absolute;
-              top: 10px;
-              right: 5px;
-              transform: translateY(0);
-              font-size: 16px;
-              color: $white;
-              @media (min-width: 1200px) {
-                top: 50%;
-                transform: translateY(-50%);
+            &.no-sign {
+              padding-right: 0;
+              a {
+                &::after {
+                  display: none;
+                }
+              }
+            }
+            &.dropdown-right {
+              .dropdown-menu {
+                right: 0;
+                left: auto;
+              }
+            } 
+            > a {
+              &::after {
+                content: "+";
+                position: absolute;
+                top: 10px;
+                right: 0px;
+                transform: translateY(0);
+                font-size: 16px;
+                color: $white;
+                @media (min-width: 1200px) {
+                  top: 50%;
+                  transform: translateY(-50%);
+                }
               }
             }
             li {
               a {
                 color: $white;
+                &::after {display:none}
                 @media (min-width: 1200px) {
                   color: #282828;
                 }
@@ -180,26 +211,31 @@
             }
           }
           &:hover {
-            ul {
-              display: flex;
+            cursor: pointer;
+            .dropdown-menu {
+              display: grid;
             }
             &.dropdown {
-              &::before {
-                content: "-";
-                color: $white;
-                @media (min-width: "1200px") {
+              a {
+                &::after {
+                  content: "-";
                   color: $white;
+                  @media (min-width: "1200px") {
+                    color: $white;
+                  }
                 }
               }
             }
           }
           a {
             padding: 10px 14px;
+            font-size: 14px;
             display: block;
             text-decoration: none;
             color: $white;
             margin-bottom: 0;
             margin-right: 0;
+            position: relative;
             &._btn-1-fill,
             &._btn-2-fill,
             &._btn-3-fill {
@@ -214,7 +250,7 @@
               &._btn-1-fill,
               &._btn-2-fill,
               &._btn-3-fill {
-                padding: 4px 15px;
+                padding: 3px 15px 4px 15px;
               }
             }
             &:hover {
@@ -248,7 +284,7 @@
               }
             }
           }
-          ul {
+          .dropdown-menu {
             position: relative;
             top: auto;
             left: auto;
@@ -257,22 +293,64 @@
             flex-direction: column;
             display: none;
             padding-left: 20px;
+            height: 150px;
             background: $color1;
+            padding: 0;
+            border-radius: 0;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            border-width: 0;
             @media (min-width: 1200px) {
               position: absolute;
+              height: auto;
+              overflow-y: hidden;
+              overflow-x: hidden;
               top: 100%;
               width: 200px;
               left: 0;
               padding-left: 0;
+            }
+            ul {
+              flex-direction: column;
             }
             li {
               display: block;
               border-bottom: 1px solid #f1f1f1;
               margin: 0;
               width: 100%;
+              &:nth-last-child(1) {
+                border-width: 0;
+              }
               a {
                 padding: 10px;
                 color: $white;
+              }
+            }
+          }
+          &.dropdown-full {
+            position: static;
+            .dropdown-menu {
+              width: 100%;
+              padding: 8px;
+              grid-template-columns: repeat(1, 1fr);
+              gap: 15px;
+              @include responsive_min($lg) {
+                grid-template-columns: repeat(3, 1fr);
+              }
+              .dropdown-menu-head {
+                font-weight: bold;
+                color: $white;
+                font-size: 13px;
+                border-width: 1px;
+              }
+              li {
+                border-width: 0;
+                padding: 5px 0px;
+                a {
+                  margin-left: 15px;
+                  padding: 0px 0px;
+                  font-size: 13px;
+                }
               }
             }
           }
