@@ -32,7 +32,7 @@
     }
     .top-menu-set {
       .top-menu {
-        ul {
+        ul { 
           li {
             &.dropdown {
               color: $white;
@@ -107,7 +107,7 @@
       top: 100%;
       flex-direction: column;
       z-index: 110;
-      background: transparent;
+      background: transparent; 
       &.active {
         display: flex;
         background: $color1;
@@ -130,7 +130,7 @@
       }
       ul {
         display: flex;
-        flex-direction: column;
+        flex-direction: column; margin-bottom: 0; padding-left: 0;
         @media (min-width: 1200px) {
           flex-direction: row;
           align-items: center;
